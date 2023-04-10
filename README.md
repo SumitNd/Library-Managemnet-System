@@ -30,3 +30,8 @@
 
 ###### Entities & Attributes ######
 ![LibMgmt](https://user-images.githubusercontent.com/127073479/230754835-f0964041-499b-4e2e-a56a-7ecf1fcdbe4b.png)
+
+Screen Recording of the system
+
+https://user-images.githubusercontent.com/114416799/230966680-02fbcf6b-54de-4a39-bd65-ae7a9c634764.mp4
+
