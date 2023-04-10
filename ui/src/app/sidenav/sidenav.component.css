@@ -1,0 +1,152 @@
+/* Sidenav styling */
+.sidenav {
+  /* height: 100%; Full-height: remove this if you want "auto" height */
+  width: 200px; /* Set the width of the sidebar */
+  /* position: fixed; Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-image: linear-gradient(to bottom right, #333, #336);
+  border-top-right-radius: 80px;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  /* padding-top: 20px; Padding on top */
+  font-family: 'Amita', cursive;
+  color: aqua;
+  /* width: 250px; */
+  padding-left: 20px;
+  height: 100vh;
+  /* background-image: linear-gradient(30deg , #0048bd, #44a7fd); */
+  /* border-top-right-radius: 80px; */
+  position: absolute;
+  left: 0;
+}
+ 
+
+
+
+/* Active/current link */
+.sidenav a:active {
+  background-color: aqua; /* Dark grey */
+  color: #4e2626;
+  padding-left: 24px; /* Increase padding-left for visual effect */
+
+  color: #1b2038;
+  background: aqua;
+  outline: none;
+  position: relative;
+  /* background-color: #fff; */
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: 0.3s;
+}
+
+
+
+/* Sidenav links */
+.sidenav a {
+  /* padding: 6px 8px 6px 16px; */
+  /* text-decoration: none; */
+  /* font-size: 20px; */
+  color: aqua; /* White text */
+  /* display: block; */
+  transition: 0.3s; /* Add transition effect to links */
+
+  font-size: 12px;
+  /* color: #fff; */
+  display: block;
+  padding: 12px;
+  padding-left: 30px;
+  text-decoration: none;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.sidenav a i {
+  margin-right: 5px;
+}
+.sidenav i {
+  margin-right: 8px;
+}
+/* Mouse-over links */
+.sidenav a:hover {
+  /* background-color: #555; Dark grey */
+  /* color: #fff; */
+  padding-left: 24px; /* Increase padding-left for visual effect */
+
+  color: #1b2038;
+  background: aqua;
+  outline: none;
+  position: relative;
+  /* background-color: #fff; */
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: 0.3s;
+}
+
+.sidenav a:hover::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 100%;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-bottom-right-radius: 18px;
+  transition: opacity 0.3s ease-in-out;
+  box-shadow: 0 18px 0 0 aqua;
+
+  box-shadow: transparent;
+}
+
+.sidenav a:hover::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  top: 38px;
+  right: 0;
+  height: 35px;
+  width: 35px;
+  border-top-right-radius: 11px;
+  
+  box-shadow:inset 0px 9px 0px 0px aqua;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidenav p {
+  margin: 0;
+  padding: 40px 0;
+}
+
+body {
+  font-family: 'Roboto';
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+.social {
+  height: 0;  
+}
+
+.social i:before {
+  width: 17px;
+  height: 17px;
+  font-size: 19px;
+  position: fixed;
+  color: aqua;
+  background: #35006e;
+  padding: 10px;
+  border-radius: 50%;
+  top:5px;
+  right:5px;
+}
+
+.fa:hover{ 
+  color:#8187fe;
+  transition-duration: 0.3s;
+   -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
+  transform: scale(1.3); 
+  transition-timing-function: ease-in-out;
+}

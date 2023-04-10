@@ -1,0 +1,52 @@
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amita&family=Gentium+Book+Plus&family=Goudy+Bookletter+1911&family=Poiret+One&display=swap" rel="stylesheet">
+
+<body class="body">
+  
+
+<br>
+<h1 [ngClass]="isGreen? 'title-green':'title-red'" >{{title}}</h1>
+
+<h2 *ngIf="books.length<1">No Data</h2>
+<br>
+<table >
+    <thead>
+      <tr class="row">
+        <!-- <th>ID</th> -->
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN</th>
+        <th>Publication Date</th>
+        <th>Publisher</th>
+        <th>Copies</th>
+        <th>Category</th>
+        <th>Genre</th>
+        <th>Subgenre</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody *ngIf="books.length > 0">
+      <tr *ngFor="let book of books">
+        <!-- <td>{{book.id}}</td> -->
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.isbn}}</td>
+        <td>{{book.publicationdate }}</td>
+        <td>{{book.publisher}}</td>
+        <td>{{book.copies}}</td>
+        <td>{{book.category }}</td>
+        <td>{{ book.genre }}</td>
+        <td>{{ book.subgenre }}</td>
+        <td>
+          <button class="button" id="b" (click)="deleteBook(book.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div style= "margin: 20px; float:right">
+    
+    <button class="button" aria-label="Add Book" title="Add Book" (click)="addBook()"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+  </div>
+
+</body>

@@ -1,0 +1,28 @@
+<br>
+<h1 [ngClass]="isGreen? 'title-green':'title-red'">{{title}}</h1>
+
+<h2 *ngIf="authors.length<1">No Data</h2><br>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Birth Date</th>
+            <th>Nationality</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="authors.length > 0">
+        <tr *ngFor="let author of authors">
+            <td>{{author.name}}</td>
+            <td>{{author.birthDate}}</td>
+            <td>{{author.nationality}}</td>
+            <td>
+                <button class="button" id="b" (click)="deleteAuthor(author.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div style="margin: 20px; float: right">
+    <button class="button" aria-label="Add Author" title="Add Author" (click)="addAuthor()"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+</div>

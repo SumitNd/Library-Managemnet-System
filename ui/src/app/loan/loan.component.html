@@ -1,0 +1,33 @@
+
+<br>
+<h1 [ngClass]="isGreen? 'title-green':'title-red'">{{title}}</h1>
+
+<h2 *ngIf="loans.length<1">No Data</h2><br>
+
+<table>
+    <thead>
+        <tr>
+            <th>Book id</th>
+            <th>Student id</th>
+            <th>Checkout Date</th>
+            <th>Due Date</th>
+            <th>Return Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="loans.length>0">
+        <tr *ngFor="let loan of loans">
+            <td>{{loan.bookId}}</td>
+            <td>{{loan.studentId}}</td>
+            <td>{{loan.checkoutDate}}</td>
+            <td>{{loan.dueDate}}</td>
+            <td>{{loan.returnDate}}</td>
+            <td>
+                <button class="button" id="b" (click)="deleteLoan(loan.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div style="margin: 20px; float: right">
+    <button aria-label="Add Loan" title="Add Loan" class="button" (click)="addLoan()"><i class="fa fa-plus-square" aria-hidden="true"></i></button>
+</div>
