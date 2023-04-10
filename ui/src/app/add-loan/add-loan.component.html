@@ -1,32 +1,37 @@
-<div style="padding-left: 100px;">
-    <h1>Add Loan</h1>
+<link href="https://fonts.googleapis.com/css2?family=Amita&family=Gentium+Book+Plus&family=Goudy+Bookletter+1911&family=Poiret+One&display=swap" rel="stylesheet">
+
+<br><br>    <h1>Add Loan</h1>
+
+<div class="form">
+
+    <br><br>
 
     <form [formGroup]="loanForms" (ngSubmit)="saveLoan()">
+        <div class="form-row">
         <div>
-            <label for="bookId">Book Id:</label>
-            <input type="number" id="bookId" formControlName="bookId">
-        </div>
-        <div>
-            <label for="studentId">Student Id:</label>
-            <input type="number" id="studentId" formControlName="studentId">
+            <label for="bookId" class="col-form-label">Book Id :</label>
+            <input type="number" id="bookId" formControlName="bookId" class="form-control" placeholder="Book Id">
         </div>
         <div>
-            <label for="checkoutDate">Checkout Date:</label>
-            <input type="date" id="checkoutDate" formControlName="checkoutDate">
+            <label for="studentId" class="col-form-label">Student Id :</label>
+            <input type="number" id="studentId" formControlName="studentId" class="form-control" placeholder="Student Id">
         </div>
         <div>
-            <label for="dueDate">Due Date:</label>
-            <input type="date" id="dueDate" formControlName="dueDate">
+            <label for="checkoutDate" class="col-form-label">Checkout Date :</label>
+            <input type="date" id="checkoutDate" formControlName="checkoutDate" class="form-control" placeholder="Checkout Date">
         </div>
         <div>
-            <label for="returnDate">Return Date:</label>
-            <input type="date" id="returnDate" formControlName="returnDate">
+            <label for="dueDate" class="col-form-label">Due Date :</label>
+            <input type="date" id="dueDate" formControlName="dueDate" class="form-control" placeholder="Due Date">
         </div>
-        <div *ngIf="loanForms.valid">
-            <input type="submit" value="Save Loan">
+        <div>
+            <label for="returnDate" class="col-form-label">Return Date :</label>
+            <input type="date" id="returnDate" formControlName="returnDate" class="form-control" placeholder="Return Date">
         </div>
+    </div>
+    <br><br><br><br><br>
+    <div class="stage">
+        <button class="btn">Save Loan</button>
+      </div>
     </form>
 </div>
-
-<h3>Form Status: {{loanForms.valid}}</h3>
-<h3>Form json: {{loanForms.value    |   json}}</h3>

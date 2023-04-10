@@ -1,24 +1,27 @@
+<link href="https://fonts.googleapis.com/css2?family=Amita&family=Gentium+Book+Plus&family=Goudy+Bookletter+1911&family=Poiret+One&display=swap" rel="stylesheet">
 
-<div style="padding-left: 100px;">
-    <h1>Add Author</h1>
+<br><br>    <h1>Add Author</h1>
+<div class="form">
+    <br><br>
     <form [formGroup]="authorForms" (ngSubmit)="saveAuthor()">
+        <div class="form-row">
         <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" formControlName="name">
-        </div>
-        <div>
-            <label for="birthDate">Birth Date:</label>
-            <input type="date" id="birthDate" formControlName="birthDate">
+            <label for="name" class="col-form-label">Name :</label>
+            <input type="text" id="name" formControlName="name" class="form-control" placeholder="Name">
         </div>
         <div>
-            <label for="nationality">Nationality:</label>
-            <input type="text" id="nationality" formControlName="nationality">
+            <label for="birthDate" class="col-form-label">Birth Date :</label>
+            <input type="date" id="birthDate" formControlName="birthDate" class="form-control" placeholder="Birth Date">
         </div>
-        <div *ngIf="authorForms.valid">
-            <input type="submit" value="Save Author">
+        <div>
+            <label for="nationality" class="col-form-label">Nationality :</label>
+            <input type="text" id="nationality" formControlName="nationality" class="form-control" placeholder="Nationality">
         </div>
+    </div>
+    <br><br><br><br><br>
+    <div class="stage">
+            <button class="btn">Save Author</button>
+          </div>
     </form>
 </div>
 
-<h3>Form Status: {{authorForms.valid}}</h3>
-<h3>Form json: {{authorForms.value  |   json}}</h3>

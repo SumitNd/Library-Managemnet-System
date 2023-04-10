@@ -1,32 +1,37 @@
-<div style="padding-left: 100px;">
-    <h1>Add Student</h1>
+<link href="https://fonts.googleapis.com/css2?family=Amita&family=Gentium+Book+Plus&family=Goudy+Bookletter+1911&family=Poiret+One&display=swap" rel="stylesheet">
+
+<br><br>
+<h1>Add Student</h1>
+<div class="form">
+    <br><br>
 
     <form [formGroup]="studentForms" (ngSubmit)="saveStudent()">
+        <div class="form-row">
         <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" formControlName="name">
-        </div>
-        <div>
-            <label for="department">Department:</label>
-            <input type="text" id="department" formControlName="department">
+            <label for="name" class="col-form-label">Name :</label>
+            <input type="text" id="name" formControlName="name" class="form-control" placeholder="Name">
         </div>
         <div>
-            <label for="rollNumber">Roll Number:</label>
-            <input type="text" id="rollNumber" formControlName="rollNumber">
+            <label for="department" class="col-form-label">Department :</label>
+            <input type="text" id="department" formControlName="department" class="form-control" placeholder="Department">
         </div>
         <div>
-            <label for="birthDate">Birth Date:</label>
-            <input type="date" id="birthDate" formControlName="birthDate">
+            <label for="rollNumber" class="col-form-label">Roll Number :</label>
+            <input type="text" id="rollNumber" formControlName="rollNumber" class="form-control" placeholder="Roll Number">
         </div>
         <div>
-            <label for="mobileNumber">Mobile Number:</label>
-         <input type="text" id="mobileNumber" formControlName="mobileNumber">
+            <label for="birthDate" class="col-form-label">Birth Date :</label>
+            <input type="date" id="birthDate" formControlName="birthDate" class="form-control" placeholder="Birth Date">
         </div>
-        <div *ngIf="studentForms.valid">
-            <input type="submit" value="Save Student">
+        <div>
+            <label for="mobileNumber" class="col-form-label">Mobile Number :</label>
+         <input type="text" id="mobileNumber" formControlName="mobileNumber" class="form-control" placeholder="Mobile Number">
         </div>
+    </div>
+    <br><br><br><br><br>
+        <div class="stage">
+            <button class="btn">Save Student</button>
+          </div>
+          
     </form>
 </div>
-
-<h3>Form Status: {{studentForms.valid}}</h3>
-<h3>Form json: {{studentForms.value |   json}}</h3>

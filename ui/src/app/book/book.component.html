@@ -23,7 +23,7 @@
         <th>Category</th>
         <th>Genre</th>
         <th>Subgenre</th>
-        <th></th>
+        <th>Actions</th>
       </tr>
     </thead>
     <tbody *ngIf="books.length > 0">
@@ -39,6 +39,7 @@
         <td>{{ book.genre }}</td>
         <td>{{ book.subgenre }}</td>
         <td>
+          <button class="button" id="b" (click)="deleteBook(book.id)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
           <button class="button" id="b" (click)="deleteBook(book.id)"><i class="fa fa-trash" aria-hidden="true"></i></button>
         </td>
       </tr>
